@@ -1,0 +1,227 @@
+SYSTEM ROLE:
+You are a senior full-stack developer specializing in Google Apps Script 
+backends, GitHub Pages frontends, and cryptocurrency payment integrations. 
+You write production-ready code with no placeholders, no broken template 
+literals, and no duplicate object keys. Every function is complete. 
+Every URL is correctly formed.
+
+═══════════════════════════════════════════════════════
+PROJECT: AXIOM — Automated Crypto Commerce System
+═══════════════════════════════════════════════════════
+
+BUILD ME TWO FILES:
+
+───────────────────────────────────────────────────────
+FILE 1: code.gs  (Google Apps Script Backend)
+───────────────────────────────────────────────────────
+
+ARCHITECTURE:
+- Google Apps Script (GAS) deployed as Web App
+- Receives two types of POST requests:
+  1. NOWPayments IPN webhook (JSON) — payment confirmation
+  2. HTML form submission (URL-encoded) — customer email capture
+- doPost(e) detects type via content-type header and routes accordingly
+
+PAYMENT PROVIDER:
+- NOWPayments REST API (https://api.nowpayments.io/v1)
+- API Key: [YOUR_NP_API_KEY]
+- IPN Secret: [YOUR_IPN_SECRET]
+- IPN callback URL: [YOUR_GAS_DEPLOYMENT_URL]
+- On payment_status = "finished" or "confirmed" → trigger delivery
+
+DELIVERY SYSTEM:
+- Google Drive ZIP file ID: [YOUR_DRIVE_ZIP_ID]
+- On confirmed payment:
+  1. Generate PDF receipt using DocumentApp
+  2. Attach ZIP + PDF receipt to Gmail
+  3. Send to customer email
+  4. Log to Google Sheets
+
+DISCORD NOTIFICATIONS:
+- Webhook URL: [YOUR_DISCORD_WEBHOOK_URL]
+- Notify on: payment confirmed, partial payment, 
+             email captured, delivery failure, quota exhausted
+
+GOOGLE SHEETS LOGGING:
+- Sheet "Orders":    Timestamp, Payment ID, Order ID, USD Amount,
+                     Currency, Status, Crypto Paid, Cart, Customer Email
+- Sheet "Pending":   Timestamp, Payment ID, Email, Cart, Ticker, Status
+- Sheet "Diagnostics": Timestamp, Test, Status, Message
+- Sheet "Config":    Parameter, Value, Instructions
+
+CONFIG SHEET VALUES (read at runtime):
+- Master Switch (ON/OFF to pause entire system)
+- Discord Webhook URL
+- IPN Secret
+- NOWPayments API Key
+
+FUNCTIONS REQUIRED:
+- doPost(e)                    → master router
+- handleNOWPaymentsIPN()       → process confirmed payments
+- handleCheckoutForm()         → capture customer email, store in Pending
+- processConfirmedPayment()    → PDF + email + Discord + log
+- generatePDFReceipt()         → DocumentApp PDF, auto-trashes temp doc
+- shipOrder()                  → Gmail with ZIP + PDF attachments
+- checkEmailQuota()            → guard all sends, log if exhausted
+- notifyDiscord()              → post to webhook
+- storePendingEmail()          → write to Pending sheet
+- getPendingEmail()            → lookup by payment ID
+- removePendingEmail()         → delete row by payment ID
+- retryPendingOrders()         → polls NOWPayments API for pending rows
+- sendDailyDigest()            → email + Discord summary at 8AM
+- installSystem()              → creates all sheets, triggers, config
+- runFullPipelineDiagnostic()  → tests every system component
+- simulateIPN()                → end-to-end test without real payment
+- getConfigSheet()             → reads Config tab at runtime
+- logToOrders()                → append to Orders sheet
+- logToDiagnostics()           → append to Diagnostics sheet
+- isValidEmail()               → regex validation
+- jsonResponse()               → ContentService JSON
+- textResponse()               → ContentService plain text
+- htmlResponse()               → ContentService HTML
+
+TRIGGERS (installed by installSystem):
+- retryPendingOrders → every 5 minutes
+- sendDailyDigest    → daily at 8AM
+
+SECURITY:
+- Master switch in Config sheet — set OFF to pause instantly
+- Block placeholder wallet addresses from processing
+- Validate email with regex before any processing
+- Check Gmail quota before every send
+- IPN field validation (payment_id + payment_status must exist)
+- No sensitive data in logs
+
+ERROR HANDLING:
+- Every function wrapped in try/catch
+- All errors logged to Diagnostics sheet
+- All errors notified to Discord
+- Failed deliveries logged to Failed sheet for manual review
+- Email quota exhaustion notified to Discord immediately
+
+RETRY LOGIC:
+- retryPendingOrders() runs every 5 min via trigger
+- Polls NOWPayments GET /payment/{id} for each pending row
+- On confirmed → processConfirmedPayment() → delete from Pending
+- Expire after 24 hours → log to Failed → remove from Pending
+
+PDF RECEIPT FORMAT:
+- Product name as heading
+- Transaction ID, Customer Email, Network, Total, Items, Status, Date
+- Support email at bottom
+- Auto-trash the temp Google Doc after PDF blob extracted
+
+DIAGNOSTIC SUITE:
+- safeRun() wrapper with 25s hard timeout guard
+- Tests: Drive, NOWPayments API, Discord, PDF, Email, Logging,
+         Triggers, Wallet placeholders, Gmail quota
+- Runtime counter in output
+- Results posted to Discord and Diagnostics sheet
+
+───────────────────────────────────────────────────────
+FILE 2: index.html  (GitHub Pages Frontend)
+───────────────────────────────────────────────────────
+
+STACK:
+- Single HTML file
+- Tailwind CSS via CDN (https://cdn.tailwindcss.com)
+- Google Fonts Inter via full googleapis.com CSS2 URL
+- Vanilla JavaScript only — no frameworks
+
+DESIGN:
+- Dark theme: background #0b0f1a
+- Glass morphism cards: rgba(30,41,59,0.7) + backdrop-blur
+- Gradient text: linear-gradient(90deg, #818cf8, #c084fc)
+- Gradient buttons: linear-gradient(90deg, #6366f1, #8b5cf6)
+- Fully responsive: mobile-first, lg:grid-cols-3 layout
+- Smooth fade-in animations on panel transitions
+
+PSYCHOLOGICAL TRIGGERS:
+- Top bar: "X packs sold this week · Y people viewing right now"
+  (Y fluctuates every 5s via setInterval)
+- Per-product: "🔥 N sold" badge + "⏳ Save $X at launch price"
+- Strikethrough future pricing on every product card
+- Urgency banner: "Launch Price — Ends Soon. After that, prices double."
+- Rotating buyer popup (bottom-left): "Someone just purchased [product]
+  · N min ago · Country" — appears every 25-45 seconds
+- Testimonials section with 3 verified buyer quotes
+- Savings callout in cart: "You save $X vs buying separately"
+- Lifetime guarantee badge: "Buy once, own forever. No subscriptions."
+- Privacy note under checkout button: email never shared
+
+PRODUCTS (4 cards):
+- Card 1: Core Shop Engine       $49.99  (future: $99.99)
+- Card 2: Web3 Wallet Connect    $19.99  (future: $39.99)
+- Card 3: Admin Dashboard        $29.99  (future: $59.99)
+- Card 4: Full Stack Bundle      $79.99  (future: $199.99)
+  → Bundle card spans 2 columns, green CTA, pulsing glow border
+  → Adding bundle replaces individual items in cart
+  → Adding individual when bundle is in cart shows warning
+
+CHECKOUT FLOW (3 steps in sidebar):
+STEP 1 — Coin selector grid (16 coins):
+  BTC ETH LTC DOGE SOL TRX USDT USDC BNB XRP XLM ADA BCH DASH ZEC DGB
+  → Selecting coin calls NOWPayments API to create invoice
+  → Must have items in cart first
+
+STEP 2 — Payment panel:
+  → QR code from api.qrserver.com with pay_address
+  → Crypto amount from NOWPayments invoice (pay_amount)
+  → Wallet address display with tap-to-copy
+  → 15 minute countdown timer
+    - Warns in red at 5 minutes
+    - Auto-resets on expiry
+  → "Change coin" back button
+
+STEP 3 — Email capture + submit:
+  → Email input with validation
+  → Submit button: "I've Sent Payment — Verify & Deliver"
+  → Loading spinner state during submission
+  → POSTs URL-encoded form to GAS (mode: no-cors)
+  → Fields: email, payment_id, cart, ticker, usd_total,
+            crypto_amount, pay_address
+  → On success: show success panel (no page redirect)
+  → Privacy note: "Your email is only used for delivery. Never shared."
+
+NOWPAYMENTS INTEGRATION (frontend):
+- Call POST https://api.nowpayments.io/v1/payment directly from browser
+- Headers: x-api-key + Content-Type application/json
+- Body: price_amount, price_currency usd, pay_currency,
+        order_description, ipn_callback_url (GAS URL),
+        is_fixed_rate false, is_fee_paid_by_user false
+- On success: display pay_address + pay_amount
+- On error: show message, suggest trying another coin
+
+CART RULES:
+- No duplicate items (check by id before push)
+- Remove button per item
+- Cart count badge animates on add
+- Savings bar appears when cart total > 0
+- Cart clears on successful checkout
+
+DO NOT:
+- Use broken template literals (always use ${} inside backticks)
+- Duplicate object keys in any config object
+- Leave any YOUR_X_HERE placeholder in final output
+- Use mode: cors for GAS fetch (must be no-cors)
+- Add unnecessary comments that break parsing
+- Import any external JS library other than Tailwind CDN
+
+OUTPUT FORMAT:
+- Output FILE 1 (code.gs) fully first — no truncation
+- Then output FILE 2 (index.html) fully — no truncation
+- No explanation between files
+- No "to be continued" — complete files only
+
+═══════════════════════════════════════════════════════
+CREDENTIALS TO INSERT:
+═══════════════════════════════════════════════════════
+NP_API_KEY:       [YOUR_NP_API_KEY]
+NP_IPN_SECRET:    [YOUR_IPN_SECRET]
+DISCORD_WEBHOOK:  [YOUR_DISCORD_WEBHOOK_URL]
+GAS_URL:          [YOUR_GAS_DEPLOYMENT_URL]
+DRIVE_ZIP_ID:     [YOUR_DRIVE_ZIP_ID]
+SUCCESS_URL:      [YOUR_SUCCESS_PAGE_URL]
+
+Replace all [...] values before submitting this prompt.
+═══════════════════════════════════════════════════════
