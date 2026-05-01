@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unchained Blueprint v1</title>
+    <script src="https://tailwindcss.com"></script>
+</head>
+<body class="bg-[#0a0a0a] text-zinc-100 min-h-screen flex items-center justify-center p-4">
+
+    <div class="max-w-sm w-full bg-zinc-900 border border-zinc-800 p-8 rounded-3xl shadow-2xl">
+        <h2 class="text-xl font-bold mb-1">Unchained Blueprint <span class="text-orange-500">v1</span></h2>
+        <p class="text-zinc-500 text-sm mb-6">Enter email to receive the PDF system.</p>
+
+        <form id="botForm" class="space-y-4">
+            <!-- Honeypot (Security) -->
+            <input type="text" name="hp_field" style="display:none" tabindex="-1" autocomplete="off">
+            
+            <input type="email" id="email" required placeholder="Email Address" 
+                class="w-full bg-black border border-zinc-800 p-3 rounded-xl focus:border-orange-500 outline-none transition-all">
+            
+            <button type="submit" id="btn" class="w-full bg-orange-600 hover:bg-orange-500 font-bold py-3 rounded-xl transition-transform active:scale-95">
+                INSTANT DOWNLOAD
+            </button>
+        </form>
+
+        <div id="status" class="mt-4 text-center text-xs font-mono uppercase tracking-widest"></div>
+    </div>
+
+    <script>
+        const WEB_APP_URL = 'YOUR_SCRIPT_URL';
+
+        document.getElementById('botForm').addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const btn = document.getElementById('btn');
+            const status = document.getElementById('status');
+            
+            btn.disabled = true;
+            status.innerText = "INITIALIZING BOT...";
+
+            const payload = {
+                email: document.getElementById('email').value,
+                hp_field: e.target.hp_field.value
+            };
+
+            try {
+                const res = await fetch(WEB_APP_URL, { method: 'POST', body: JSON.stringify(payload) });
+                const data = await res.json();
+
+                if (data.status === 'success') {
+                    status.innerHTML = "✅ SENT. CHECK INBOX";
+                    status.className = "mt-4 text-center text-green-500";
+                } else if (data.status === 'duplicate') {
+                    status.innerText = "ALREADY CLAIMED";
+                    status.className = "mt-4 text-center text-yellow-500";
+                }
+            } catch (err) {
+                status.innerText = "CONNECTION ERROR";
+            } finally {
+                btn.disabled = false;
+            }
+        });
+    </script>
+</body>
+</html>
