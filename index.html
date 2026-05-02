@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AXIOM · The Unchained Commerce Concern</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Space+Mono:wght@400;700&display=swap');
+        * { font-family: 'Space Grotesk', sans-serif; }
+        .mono { font-family: 'Space Mono', monospace; }
+        .glow-orange { box-shadow: 0 0 40px rgba(234,88,12,0.15); }
+        .glow-line { box-shadow: 0 1px 0 rgba(234,88,12,0.3); }
+        .hero-grid {
+            background-image: 
+                linear-gradient(rgba(234,88,12,0.03) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(234,88,12,0.03) 1px, transparent 1px);
+            background-size: 60px 60px;
+        }
+        .stat-card:hover { border-color: rgba(234,88,12,0.4); transform: translateY(-2px); }
+        .nav-link:hover { color: #f97316; }
+        .ticker-wrap { overflow: hidden; white-space: nowrap; }
+        .ticker-move {
+            display: inline-block;
+            animation: ticker 25s linear infinite;
+        }
+        @keyframes ticker {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+        .fade-in { animation: fadeIn 0.8s ease forwards; }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body class="bg-[#080808] text-zinc-100 min-h-screen">
+
+    <!-- TICKER -->
+    <div class="bg-orange-600 py-1.5 ticker-wrap">
+        <div class="ticker-move mono text-xs text-black font-bold">
+            &nbsp;&nbsp;&nbsp;AXIOM PATENT PORTFOLIO · 11 INTERNATIONAL PCT APPLICATIONS · FILED VIA ARIPO · PRIORITY DATE: MAY 2026 · 157 DESIGNATED COUNTRIES · USD $350M+ PORTFOLIO VALUATION · AXIOM PATENT PORTFOLIO · 11 INTERNATIONAL PCT APPLICATIONS · FILED VIA ARIPO · PRIORITY DATE: MAY 2026 · 157 DESIGNATED COUNTRIES · USD $350M+ PORTFOLIO VALUATION ·&nbsp;&nbsp;&nbsp;
+        </div>
+    </div>
+
+    <!-- NAVBAR -->
+    <nav class="border-b border-zinc-800 bg-[#080808]/95 backdrop-blur-sm sticky top-0 z-50">
+        <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
+            <div class="flex items-center gap-3">
+                <div class="w-8 h-8 bg-orange-600 rounded-lg flex items-center justify-center">
+                    <span class="mono text-black font-bold text-sm">A</span>
+                </div>
+                <div>
+                    <div class="font-bold text-sm tracking-wide">AXIOM</div>
+                    <div class="mono text-zinc-500 text-xs">Unchained Commerce Concern</div>
+                </div>
+            </div>
+            <div class="hidden md:flex items-center gap-8">
+                <a href="index.html" class="nav-link text-orange-500 text-sm font-medium transition-colors">Home</a>
+                <a href="portfolio.html" class="nav-link text-zinc-400 text-sm font-medium transition-colors">Portfolio</a>
+                <a href="invest.html" class="nav-link text-zinc-400 text-sm font-medium transition-colors">Why Invest</a>
+                <a href="download.html" class="nav-link text-zinc-400 text-sm font-medium transition-colors">Download</a>
+            </div>
+            <a href="download.html" class="bg-orange-600 hover:bg-orange-500 text-black font-bold px-5 py-2 rounded-xl text-sm transition-colors">
+                Investor Pack →
+            </a>
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    <section class="hero-grid min-h-screen flex items-center relative overflow-hidden">
+        <div class="absolute inset-0 bg-gradient-to-b from-transparent via-[#080808]/50 to-[#080808]"></div>
+        <div class="max-w-6xl mx-auto px-6 py-24 relative z-10">
+            
+            <div class="mono text-orange-500 text-xs tracking-widest mb-6 fade-in">
+                ◆ PATENT PENDING · PCT/ZW/2026 · ARIPO → WIPO
+            </div>
+
+            <h1 class="text-5xl md:text-7xl font-bold leading-tight mb-6 fade-in" style="animation-delay:0.1s">
+                Infrastructure<br>
+                <span class="text-orange-500">built in Africa.</span><br>
+                Protected across<br>
+                the world.
+            </h1>
+
+            <p class="text-zinc-400 text-lg md:text-xl max-w-2xl mb-10 leading-relaxed fade-in" style="animation-delay:0.2s">
+                AXIOM is an 11-patent international portfolio covering the complete 
+                automated cryptocurrency commerce infrastructure — from payment matching 
+                to autonomous delivery. Built in Zimbabwe. Filed in 157 countries.
+            </p>
+
+            <div class="flex flex-col sm:flex-row gap-4 fade-in" style="animation-delay:0.3s">
+                <a href="portfolio.html" class="bg-orange-600 hover:bg-orange-500 text-black font-bold px-8 py-4 rounded-xl text-sm transition-all active:scale-95 text-center">
+                    VIEW PATENT PORTFOLIO →
+                </a>
+                <a href="download.html" class="border border-zinc-700 hover:border-orange-500 text-zinc-300 hover:text-orange-500 font-bold px-8 py-4 rounded-xl text-sm transition-all text-center">
+                    DOWNLOAD INVESTOR PACK
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- STATS BAR -->
+    <section class="border-y border-zinc-800 bg-zinc-900/30 py-8">
+        <div class="max-w-6xl mx-auto px-6 grid grid-cols-2 md:grid-cols-4 gap-6">
+            <div class="text-center">
+                <div class="mono text-orange-500 text-3xl font-bold">11</div>
+                <div class="text-zinc-500 text-xs mt-1 tracking-wide">PATENT APPLICATIONS</div>
+            </div>
+            <div class="text-center">
+                <div class="mono text-orange-500 text-3xl font-bold">157</div>
+                <div class="text-zinc-500 text-xs mt-1 tracking-wide">DESIGNATED COUNTRIES</div>
+            </div>
+            <div class="text-center">
+                <div class="mono text-orange-500 text-3xl font-bold">$350M+</div>
+                <div class="text-zinc-500 text-xs mt-1 tracking-wide">PORTFOLIO VALUATION</div>
+            </div>
+            <div class="text-center">
+                <div class="mono text-orange-500 text-3xl font-bold">47</div>
+                <div class="text-zinc-500 text-xs mt-1 tracking-wide">LIVE TRANSACTIONS PRE-FILING</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- THE PROBLEM -->
+    <section class="py-24 max-w-6xl mx-auto px-6">
+        <div class="mono text-orange-500 text-xs tracking-widest mb-4">◆ THE PROBLEM</div>
+        <h2 class="text-4xl md:text-5xl font-bold mb-6">
+            $67.2 billion of the creator<br>economy is locked out.
+        </h2>
+        <p class="text-zinc-400 text-lg max-w-3xl mb-16 leading-relaxed">
+            PayPal, Stripe, Gumroad, and Square are unavailable or severely restricted in 
+            over 100 countries. Creators in Africa, South Asia, and Latin America have no 
+            access to the digital commerce infrastructure the rest of the world takes for granted.
+        </p>
+
+        <div class="grid md:grid-cols-3 gap-6">
+            <div class="stat-card bg-zinc-900 border border-zinc-800 p-6 rounded-2xl transition-all duration-300">
+                <div class="text-orange-500 text-2xl mb-3">✗</div>
+                <div class="font-bold mb-2">PayPal</div>
+                <div class="text-zinc-500 text-sm">Unavailable or withdrawal-restricted in 100+ countries including Zimbabwe, Nigeria, Pakistan.</div>
+            </div>
+            <div class="stat-card bg-zinc-900 border border-zinc-800 p-6 rounded-2xl transition-all duration-300">
+                <div class="text-orange-500 text-2xl mb-3">✗</div>
+                <div class="font-bold mb-2">Stripe</div>
+                <div class="text-zinc-500 text-sm">Available in fewer than 50 countries. Excludes the majority of Sub-Saharan Africa entirely.</div>
+            </div>
+            <div class="stat-card bg-zinc-900 border border-zinc-800 p-6 rounded-2xl transition-all duration-300">
+                <div class="text-orange-500 text-2xl mb-3">✗</div>
+                <div class="font-bold mb-2">Gumroad</div>
+                <div class="text-zinc-500 text-sm">Restricted access for African creators. The very platform that excluded AXIOM's inventor.</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- THE SOLUTION -->
+    <section class="py-24 bg-zinc-900/20 border-y border-zinc-800">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="mono text-orange-500 text-xs tracking-widest mb-4">◆ THE SOLUTION</div>
+            <h2 class="text-4xl md:text-5xl font-bold mb-6">
+                AXIOM. The alternative<br>infrastructure.
+            </h2>
+            <p class="text-zinc-400 text-lg max-w-3xl mb-16 leading-relaxed">
+                Built from scratch in Zimbabwe using zero-cost infrastructure. Accepts 300+ 
+                cryptocurrencies. Delivers digital products automatically. Logs everything. 
+                Requires no bank account. Operates in any country. Cannot be de-platformed.
+            </p>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
+                <div class="bg-[#080808] border border-zinc-800 p-5 rounded-2xl">
+                    <div class="mono text-orange-500 text-xs mb-3 tracking-wide">P001</div>
+                    <div class="font-bold mb-2 text-sm">The Engine</div>
+                    <div class="text-zinc-500 text-xs leading-relaxed">Complete automated cryptocurrency commerce system. The foundation patent.</div>
+                </div>
+                <div class="bg-[#080808] border border-zinc-800 p-5 rounded-2xl">
+                    <div class="mono text-orange-500 text-xs mb-3 tracking-wide">P002</div>
+                    <div class="font-bold mb-2 text-sm">The Architecture</div>
+                    <div class="text-zinc-500 text-xs leading-relaxed">Platform-independent deployment. Raspberry Pi to enterprise server. Any language.</div>
+                </div>
+                <div class="bg-[#080808] border border-zinc-800 p-5 rounded-2xl">
+                    <div class="mono text-orange-500 text-xs mb-3 tracking-wide">P003</div>
+                    <div class="font-bold mb-2 text-sm">The Matching Method</div>
+                    <div class="text-zinc-500 text-xs leading-relaxed">Solves the anonymous crypto payment problem. Novel. High commercial value.</div>
+                </div>
+                <div class="bg-[#080808] border border-zinc-800 p-5 rounded-2xl">
+                    <div class="mono text-orange-500 text-xs mb-3 tracking-wide">P004–P011</div>
+                    <div class="font-bold mb-2 text-sm">8 More Patents</div>
+                    <div class="text-zinc-500 text-xs leading-relaxed">Temporal tolerance, routing, graceful degradation, conversion, receipts, switch, installer, cart.</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROOF -->
+    <section class="py-24 max-w-6xl mx-auto px-6">
+        <div class="mono text-orange-500 text-xs tracking-widest mb-4">◆ PROOF OF OPERATION</div>
+        <h2 class="text-4xl font-bold mb-6">Not a concept. A running system.</h2>
+        <p class="text-zinc-400 text-lg max-w-3xl mb-12 leading-relaxed">
+            47 real commercial cryptocurrency transactions were processed before the filing date. 
+            Real customers. Real Bitcoin. Real deliveries. 99 seconds end-to-end. Zero human intervention.
+        </p>
+
+        <div class="bg-zinc-900 border border-zinc-800 rounded-2xl p-6 mono text-sm glow-orange">
+            <div class="text-zinc-500 text-xs mb-4 tracking-wide">AXIOM PRODUCTION LOG — MAY 1, 2026</div>
+            <div class="space-y-2">
+                <div><span class="text-zinc-600">[09:12:47]</span> <span class="text-zinc-400">Customer order received</span> <span class="text-orange-500">— BTC — $49.97</span></div>
+                <div><span class="text-zinc-600">[09:14:22]</span> <span class="text-zinc-400">IPN received — payment:</span> <span class="text-green-500">FINISHED</span></div>
+                <div><span class="text-zinc-600">[09:14:22]</span> <span class="text-zinc-400">Customer matched via payment_id</span></div>
+                <div><span class="text-zinc-600">[09:14:24]</span> <span class="text-zinc-400">PDF receipt generated</span> <span class="text-zinc-600">— 47,291 bytes</span></div>
+                <div><span class="text-zinc-600">[09:14:24]</span> <span class="text-zinc-400">Product ZIP retrieved</span> <span class="text-zinc-600">— 14,847,293 bytes</span></div>
+                <div><span class="text-zinc-600">[09:14:25]</span> <span class="text-zinc-400">Email delivered — 2 attachments</span></div>
+                <div><span class="text-zinc-600">[09:14:26]</span> <span class="text-zinc-400">Audit log — row 48 written</span></div>
+                <div><span class="text-zinc-600">[09:14:26]</span> <span class="text-zinc-400">Discord notification sent</span></div>
+                <div class="pt-2 border-t border-zinc-800 mt-2">
+                    <span class="text-green-500">✅ COMPLETE.</span> <span class="text-zinc-400">Total time: </span><span class="text-orange-500">99 seconds.</span> <span class="text-zinc-400">Human interventions:</span> <span class="text-orange-500">0</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- INFRINGERS PREVIEW -->
+    <section class="py-24 bg-zinc-900/20 border-y border-zinc-800">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="mono text-orange-500 text-xs tracking-widest mb-4">◆ CONFIRMED INFRINGERS</div>
+            <h2 class="text-4xl font-bold mb-6">They built what we patented.</h2>
+            <p class="text-zinc-400 text-lg max-w-3xl mb-12">
+                Multiple confirmed commercial infringers identified before grant. 
+                Each represents immediate licensing revenue upon ARIPO grant.
+            </p>
+            <div class="grid md:grid-cols-3 gap-4 mb-8">
+                <div class="bg-[#080808] border border-zinc-800 p-5 rounded-2xl flex items-center gap-4">
+                    <div class="w-10 h-10 bg-zinc-800 rounded-xl flex items-center justify-center mono text-orange-500 font-bold text-sm flex-shrink-0">S</div>
+                    <div>
+                        <div class="font-bold text-sm">Sellix.io</div>
+                        <div class="text-zinc-500 text-xs">200,000+ merchants · P001 confirmed</div>
+                    </div>
+                </div>
+                <div class="bg-[#080808] border border-zinc-800 p-5 rounded-2xl flex items-center gap-4">
+                    <div class="w-10 h-10 bg-zinc-800 rounded-xl flex items-center justify-center mono text-orange-500 font-bold text-sm flex-shrink-0">N</div>
+                    <div>
+                        <div class="font-bold text-sm">NOWPayments</div>
+                        <div class="text-zinc-500 text-xs">40,000+ merchants · P001 + P002</div>
+                    </div>
+                </div>
+                <div class="bg-[#080808] border border-zinc-800 p-5 rounded-2xl flex items-center gap-4">
+                    <div class="w-10 h-10 bg-zinc-800 rounded-xl flex items-center justify-center mono text-orange-500 font-bold text-sm flex-shrink-0">W</div>
+                    <div>
+                        <div class="font-bold text-sm">WooCommerce</div>
+                        <div class="text-zinc-500 text-xs">8,000,000+ installs · P002 + P008</div>
+                    </div>
+                </div>
+            </div>
+            <a href="portfolio.html" class="text-orange-500 hover:text-orange-400 text-sm font-bold tracking-wide transition-colors">
+                VIEW FULL INFRINGEMENT ANALYSIS →
+            </a>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="py-24 max-w-6xl mx-auto px-6 text-center">
+        <div class="mono text-orange-500 text-xs tracking-widest mb-4">◆ INVESTOR ACCESS</div>
+        <h2 class="text-4xl md:text-5xl font-bold mb-6">Ready to review the full portfolio?</h2>
+        <p class="text-zinc-400 text-lg max-w-2xl mx-auto mb-10">
+            Download the complete AXIOM investor package — full specifications, 
+            prior art search reports, infringement analyses, and market valuations.
+        </p>
+        <a href="download.html" class="inline-block bg-orange-600 hover:bg-orange-500 text-black font-bold px-10 py-4 rounded-xl text-sm transition-all active:scale-95">
+            DOWNLOAD FULL INVESTOR PACK →
+        </a>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="border-t border-zinc-800 py-12">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="grid md:grid-cols-3 gap-8 mb-8">
+                <div>
+                    <div class="flex items-center gap-2 mb-3">
+                        <div class="w-6 h-6 bg-orange-600 rounded flex items-center justify-center">
+                            <span class="mono text-black font-bold text-xs">A</span>
+                        </div>
+                        <span class="font-bold text-sm">AXIOM</span>
+                    </div>
+                    <p class="text-zinc-600 text-xs leading-relaxed">
+                        The Unchained Commerce Concern<br>
+                        Republic of Zimbabwe · 2026
+                    </p>
+                </div>
+                <div>
+                    <div class="text-zinc-500 text-xs tracking-wide mb-3 mono">NAVIGATE</div>
+                    <div class="space-y-2">
+                        <a href="portfolio.html" class="block text-zinc-400 hover:text-orange-500 text-sm transition-colors">Patent Portfolio</a>
+                        <a href="invest.html" class="block text-zinc-400 hover:text-orange-500 text-sm transition-colors">Why Invest</a>
+                        <a href="download.html" class="block text-zinc-400 hover:text-orange-500 text-sm transition-colors">Download Pack</a>
+                    </div>
+                </div>
+                <div>
+                    <div class="text-zinc-500 text-xs tracking-wide mb-3 mono">CONTACT</div>
+                    <div class="space-y-2">
+                        <a href="mailto:unchainedcommerce@atomicmail.io" class="block text-zinc-400 hover:text-orange-500 text-sm transition-colors">unchainedcommerce@atomicmail.io</a>
+                        <a href="tel:+263779674212" class="block text-zinc-400 hover:text-orange-500 text-sm transition-colors">+263 779 674 212</a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-zinc-800 pt-6 flex flex-col md:flex-row items-center justify-between gap-4">
+                <div class="mono text-zinc-600 text-xs">
+                    Patent Pending · PCT via ARIPO · Filed May 2026
+                </div>
+                <div class="mono text-zinc-600 text-xs">
+                    © The Unchained Commerce Concern · Republic of Zimbabwe · 2026
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
