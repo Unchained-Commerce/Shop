@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patent Portfolio · AXIOM</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Space+Mono:wght@400;700&display=swap');
+        * { font-family: 'Space Grotesk', sans-serif; }
+        .mono { font-family: 'Space Mono', monospace; }
+        .patent-card:hover { border-color: rgba(234,88,12,0.5); transform: translateY(-2px); }
+        .nav-link:hover { color: #f97316; }
+        .tier-a { border-left: 3px solid #ea580c; }
+        .tier-b { border-left: 3px solid #d97706; }
+        .tier-c { border-left: 3px solid #65a30d; }
+        .tier-d { border-left: 3px solid #0891b2; }
+    </style>
+</head>
+<body class="bg-[#080808] text-zinc-100 min-h-screen">
+
+    <!-- TICKER -->
+    <div class="bg-orange-600 py-1.5 overflow-hidden whitespace-nowrap">
+        <div class="inline-block animate-[ticker_25s_linear_infinite] mono text-xs text-black font-bold">
+            &nbsp;&nbsp;&nbsp;P001 · ENGINE · $87M BASE CASE &nbsp;·&nbsp; P002 · ARCHITECTURE · $57M BASE CASE &nbsp;·&nbsp; P003 · MATCHING METHOD · VERY HIGH VALUE &nbsp;·&nbsp; P008 · RECEIPT METHOD · $21.9M CONFIRMED &nbsp;·&nbsp; P011 · CART ARCHITECTURE · $24M BASE CASE &nbsp;·&nbsp; 11 PATENTS · 157 COUNTRIES · $350M+ TOTAL &nbsp;&nbsp;&nbsp;P001 · ENGINE · $87M BASE CASE &nbsp;·&nbsp; P002 · ARCHITECTURE · $57M BASE CASE &nbsp;·&nbsp; P003 · MATCHING METHOD · VERY HIGH VALUE &nbsp;·&nbsp; P008 · RECEIPT METHOD · $21.9M CONFIRMED &nbsp;·&nbsp; P011 · CART ARCHITECTURE · $24M BASE CASE &nbsp;·&nbsp; 11 PATENTS · 157 COUNTRIES · $350M+ TOTAL &nbsp;&nbsp;&nbsp;
+        </div>
+    </div>
+
+    <!-- NAVBAR -->
+    <nav class="border-b border-zinc-800 bg-[#080808]/95 backdrop-blur-sm sticky top-0 z-50">
+        <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
+            <a href="index.html" class="flex items-center gap-3">
+                <div class="w-8 h-8 bg-orange-600 rounded-lg flex items-center justify-center">
+                    <span class="mono text-black font-bold text-sm">A</span>
+                </div>
+                <div>
+                    <div class="font-bold text-sm tracking-wide">AXIOM</div>
+                    <div class="mono text-zinc-500 text-xs">Unchained Commerce Concern</div>
+                </div>
+            </a>
+            <div class="hidden md:flex items-center gap-8">
+                <a href="index.html" class="nav-link text-zinc-400 text-sm font-medium transition-colors">Home</a>
+                <a href="portfolio.html" class="nav-link text-orange-500 text-sm font-medium transition-colors">Portfolio</a>
+                <a href="invest.html" class="nav-link text-zinc-400 text-sm font-medium transition-colors">Why Invest</a>
+                <a href="download.html" class="nav-link text-zinc-400 text-sm font-medium transition-colors">Download</a>
+            </div>
+            <a href="download.html" class="bg-orange-600 hover:bg-orange-500 text-black font-bold px-5 py-2 rounded-xl text-sm transition-colors">
+                Investor Pack →
+            </a>
+        </div>
+    </nav>
+
+    <!-- HEADER -->
+    <section class="py-20 max-w-6xl mx-auto px-6">
+        <div class="mono text-orange-500 text-xs tracking-widest mb-4">◆ AXIOM PATENT PORTFOLIO</div>
+        <h1 class="text-5xl md:text-6xl font-bold mb-6">11 Patents.<br>One Priority Date.<br><span class="text-orange-500">157 Countries.</span></h1>
+        <p class="text-zinc-400 text-lg max-w-3xl leading-relaxed">
+            Filed simultaneously via ARIPO Receiving Office → WIPO PCT System, May 2026.
+            Every patent independent and independently enforceable. All from a single production system
+            built in the Republic of Zimbabwe.
+        </p>
+    </section>
+
+    <!-- PORTFOLIO STATS -->
+    <section class="border-y border-zinc-800 bg-zinc-900/30 py-8 mb-16">
+        <div class="max-w-6xl mx-auto px-6 grid grid-cols-2 md:grid-cols-5 gap-6 text-center">
+            <div>
+                <div class="mono text-orange-500 text-2xl font-bold">11</div>
+                <div class="text-zinc-600 text-xs mt-1 tracking-wide">PATENTS</div>
+            </div>
+            <div>
+                <div class="mono text-orange-500 text-2xl font-bold">4</div>
+                <div class="text-zinc-600 text-xs mt-1 tracking-wide">PATENT LAYERS</div>
+            </div>
+            <div>
+                <div class="mono text-orange-500 text-2xl font-bold">$350M+</div>
+                <div class="text-zinc-600 text-xs mt-1 tracking-wide">PORTFOLIO VALUE</div>
+            </div>
+            <div>
+                <div class="mono text-orange-500 text-2xl font-bold">$9.3M+</div>
+                <div class="text-zinc-600 text-xs mt-1 tracking-wide">YEAR 1 PROJECTED</div>
+            </div>
+            <div>
+                <div class="mono text-orange-500 text-2xl font-bold">47</div>
+                <div class="text-zinc-600 text-xs mt-1 tracking-wide">PRE-FILING TRANSACTIONS</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PATENTS GRID -->
+    <section class="max-w-6xl mx-auto px-6 pb-24">
+
+        <!-- Layer Label -->
+        <div class="flex items-center gap-3 mb-6">
+            <div class="w-3 h-3 bg-orange-600 rounded-full"></div>
+            <div class="mono text-orange-500 text-xs tracking-widest">LAYER 1 — THE ENGINE</div>
+        </div>
+
+        <!-- P001 -->
+        <div class="patent-card tier-a bg-zinc-900 border border-zinc-800 rounded-2xl p-6 mb-4 transition-all duration-300">
+            <div class="flex flex-col md:flex-row md:items-start gap-6">
+                <div class="flex-shrink-0">
+                    <div class="mono text-orange-500 text-xs tracking-wide mb-1">P001</div>
+                    <div class="bg-orange-600/10 border border-orange-600/30 rounded-xl px-3 py-1 mono text-orange-500 text-xs">FOUNDATION</div>
+                </div>
+                <div class="flex-1">
+                    <h3 class="font-bold text-lg mb-2">Automated Multi-Chain Cryptocurrency Commerce System</h3>
+                    <p class="text-zinc-500 text-sm mb-4 leading-relaxed">The engine patent. Complete seven-component automated commerce system — from payment gateway to autonomous product delivery. Any crypto, any language, any country. No bank account required.</p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="bg-zinc-800 text-zinc-400 mono text-xs px-2 py-1 rounded-lg">G06Q 20/06</span>
+                        <span class="bg-zinc-800 text-zinc-400 mono text-xs px-2 py-1 rounded-lg">G06Q 20/38</span>
+                        <span class="bg-zinc-800 text-zinc-400 mono text-xs px-2 py-1 rounded-lg">G06Q 30/06</span>
+                    </div>
+                    <div class="grid grid-cols-3 gap-4">
+                        <div>
+                            <div class="mono text-orange-500 text-sm font-bold">$87M</div>
+                            <div class="text-zinc-600 text-xs">Base Case Value</div>
+                        </div>
+                        <div>
+                            <div class="mono text-orange-500 text-sm font-bold">$2.59M</div>
+                            <div class="text-zinc-600 text-xs">Year 1 Revenue</div>
+                        </div>
+                        <div>
+                            <div class="mono text-orange-500 text-sm font-bold">5 CONFIRMED</div>
+                            <div class="text-zinc-600 text-xs">Infringers</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Layer 2 -->
+        <div class="flex items-center gap-3 mb-6 mt-12">
+            <div class="w-3 h-3 bg-amber-500 rounded-full"></div>
+            <div class="mono text-amber-500 text-xs tracking-widest">LAYER 2 — THE INFRASTRUCTURE</div>
+        </div>
+
+        <!-- P002 -->
+        <div class="patent-card tier-b bg-zinc-900 border border-zinc-800 rounded-2xl p-6 mb-4 transition-all duration-300">
+            <div class="flex flex-col md:flex-row md:items-start gap-6">
+                <div class="flex-shrink-0">
+                    <div class="mono text-amber-500 text-xs tracking-wide mb-1">P002</div>
+                    <div class="bg-amber-600/10 border border-amber-600/30 rounded-xl px-3 py-1 mono text-amber-500 text-xs">ARCHITECTURE</div>
+                </div>
+                <div class="flex-1">
+                    <h3 class="font-bold text-lg mb-2">Platform-Independent Deployment Architecture</h3>
+                    <p class="text-zinc-500 text-sm mb-4 leading-relaxed">Runs on everything — Raspberry Pi to enterprise cloud. Eight platform-neutral functional components with substitutable interface boundaries. USD $15 device to global CDN. Any language. Zero platform lock-in.</p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="bg-zinc-800 text-zinc-400 mono text-xs px-2 py-1 rounded-lg">G06F 9/44</span>
+                        <span class="bg-zinc-800 text-zinc-400 mono text-xs px-2 py-1 rounded-lg">G06F 9/48</span>
+                        <span class="bg-zinc-800 text-zinc-400 mono text-xs px-2 py-1 rounded-lg">G06Q 20/06</span>
+                    </div>
+                    <div class="grid grid-cols-3 gap-4">
+                        <div>
+                            <div class="mono text-amber-500 text-sm font-bold">$57M</div>
+                            <div class="text-zinc-600 text-xs">Base Case Value</div>
+                        </div>
+                        <div>
+                            <div class="mono text-amber-500 text-sm font-bold">$1.52M</div>
+                            <div class="text-zinc-600 text-xs">Year 1 Revenue</div>
+                        </div>
+                        <div>
+                            <div class="mono text-amber-500 text-sm font-bold">8M+ INSTALLS</div>
+                            <div class="text-zinc-600 text-xs">WooCommerce</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- P009 -->
+        <div class="patent-card tier-b bg-zinc-900 border border-zinc-800 rounded-2xl p-6 mb-4 transition-all duration-300">
+            <div class="flex flex-col md:flex-row md:items-start gap-6">
+                <div class="flex-shrink-0">
+                    <div class="mono text-amber-500 text-xs tracking-wide mb-1">P009</div>
+                    <div class="bg-amber-600/10 border border-amber-600/30 rounded-xl px-3 py-1 mono text-amber-500 text-xs">CONTROL</div>
+                </div>
+                <div class="flex-1">
+                    <h3 class="font-bold text-lg mb-2">Runtime Master Switch Architecture</h3>
+                    <p class="text-zinc-500 text-sm mb-4 leading-relaxed">Config-driven zero-downtime suspension and resumption. One spreadsheet cell. Instant effect. No code change. No redeployment. The operational spine of the AXIOM system — every other patent depends on it being ON.</p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="bg-zinc-800 text-zinc-400 mono text-xs px-2 py-1 rounded-lg">G06F 9/48</span>
+                        <span class="bg-zinc-800 text-zinc-400 mono text-xs px-2 py-1 rounded-lg">G06Q 20/06</span>
+                        <span class="bg-zinc-800 text-zinc-400 mono text-xs px-2 py-1 rounded-lg">G06F 11/07</span>
+                    </div>
+                    <div class="grid grid-cols-3 gap-4">
+                        <div>
+                            <div class="mono text-amber-500 text-sm font-bold">HIGH</div>
+                            <div class="text-zinc-600 text-xs">Licensing Potential</div>
+                        </div>
+                        <div>
+                            <div class="mono text-amber-500 text-sm font-bold">MEDIUM</div>
+                            <div class="text-zinc-600 text-xs">Commercial Value</div>
+                        </div>
+                        <div>
+                            <div class="mono text-amber-500 text-sm font-bold">BROAD</div>
+                            <div class="text-zinc-600 text-xs">Application Scope</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- P010 -->
+        <div class="patent-card tier-b bg-zinc-900 border border-zinc-800 rounded-2xl p-6 mb-4 transition-all duration-300">
+            <div class="flex flex-col md:flex-row md:items-start gap-6">
+                <div class="flex-shrink-0">
+                    <div class="mono text-amber-500 text-xs tracking-wide mb-1">P010</div>
+                    <div class="bg-amber-600/10 border border-amber-600/30 rounded-xl px-3 py-1 mono text-amber-500 text-xs">SETUP</div>
+                </div>
+                <div class="flex-1">
+                    <h3 class="font-bold text-lg mb-2">Self-Installing Commerce Infrastructure</h3>
+                    <p class="text-zinc-500 text-sm mb-4 leading-relaxed">Single idempotent function: creates all data stores, registers all triggers, populates config, verifies dependencies, logs installation, notifies operator. Complete system readiness from zero state in one execution.</p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="bg-zinc-800 text-zinc-400 mono text-xs px-2 py-1 rounded-lg">G06F 8/61</span>
+                        <span class="bg-zinc-800 text-zinc-400 mono text-xs px-2 py-1 rounded-lg">G06Q 20/06</span>
+                        <span class="bg-zinc-800 text-zinc-400 mono text-xs px-2 py-1 rounded-lg">G06F 9/44</span>
+                    </div>
+                    <div class="grid grid-cols-3 gap-4">
+                        <div>
+                            <div class="mono text-amber-500 text-sm font-bold">MEDIUM-LOW</div>
+                            <div class="text-zinc-600 text-xs">Commercial Value</div>
+                        </div>
+                        <div>
+                            <div class="mono text-amber-500 text-sm font-bold">HIGH</div>
+                            <div class="text-zinc-600 text-xs">Defensive Value</div>
+                        </div>
+                        <div>
+                            <div class="mono text-amber-500 text-sm font-bold">BROAD</div>
+                            <div class="text-zinc-600 text-xs">Application Scope</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Layer 3 -->
+        <div class="flex items-center gap-3 mb-6 mt-12">
+            <div class="w-3 h-3 bg-lime-500 rounded-full"></div>
+            <div class="mono text-lime-500 text-xs tracking-widest">LAYER 3 — THE METHODS</div>
+        </div>
+
+        <!-- P003 -->
+        <div class="patent-card tier-c bg-zinc-900 border border-zinc-800 rounded-2xl p-6 mb-4 transition-all duration-300">
+            <div class="flex flex-col md:flex-row md:items-start gap-6">
+                <div class="flex-shrink-0">
+                    <div class="mono text-lime-500 text-xs tracking-wide mb-1">P003</div>
+                    <div class="bg-lime-600/10 border border-lime-600/30 rounded-xl px-3 py-1 mono text-lime-500 text-xs">VERY HIGH VALUE</div>
+                </div>
+                <div class="flex-1">
+                    <h3 class="font-bold text-lg mb-2">Anonymous Payment Matching Method</h3>
+                    <p class="text-zinc-500 text-sm mb-4 leading-relaxed">The solution to the anonymous crypto payment problem. Invoice identifier as shared key between IPN stream and customer data stream. No session cookie. No redirect. No bank reference. Every crypto commerce system using this pattern requires a licence.</p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="bg-zinc-800 text-zinc-400 mono text-xs px-2 py-1 rounded-lg">G06Q 20/38</span>
+                        <span class="bg-zinc-800 text-zinc-400 mono text-xs px-2 py-1 rounded-lg">G06Q 20/40</span>
+                        <span class="bg-zinc-800 text-zinc-400 mono text-xs px-2 py-1 rounded-lg">H04L 9/32</span>
+                    </div>
+                    <div class="grid grid-cols-3 gap-4">
+                        <div>
+                            <div class="mono text-lime-500 text-sm font-bold">VERY HIGH</div>
+                            <div class="text-zinc-600 text-xs">Commercial Value</div>
+                        </div>
+                        <div>
+                            <div class="mono text-lime-500 text-sm font-bold">BROAD</div>
+                            <div class="text-zinc-600 text-xs">Coverage Scope</div>
+                        </div>
+                        <div>
+                            <div class="mono text-lime-500 text-sm font-bold">NOVEL</div>
+                            <div class="text-zinc-600 text-xs">No Prior Art Found</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- P004 -->
+        <div class="patent-card tier-c bg-zinc-900 border border-zinc-800 rounded-2xl p-6 mb-4 transition-all duration-300">
+            <div class="flex flex-col md:flex-row md:items-start gap-6">
+                <div class="flex-shrink-0">
+                    <div class="mono text-lime-500 text-xs tracking-wide mb-1">P004</div>
+                    <div class="bg-lime-600/10 border border-lime-600/30 rounded-xl px-3 py-1 mono text-lime-500 text-xs">HIGH VALUE</div>
+                </div>
+                <div class="flex-1">
+                    <h3 class="font-bold text-lg mb-2">Bidirectional Temporal Tolerance System</h3>
+                    <p class="text-zinc-500 text-sm mb-4 leading-relaxed">Handles both event orderings: IPN before form submission AND form before IPN — without data loss. Prior art assumes deterministic order. AXIOM is explicitly agnostic. The pending store is the architectural mechanism.</p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="bg-zinc-800 text-zinc-400 mono text-xs px-2 py-1 rounded-lg">G06Q 20/06</span>
+                        <span class="bg-zinc-800 text-zinc-400 mono text-xs px-2 py-1 rounded-lg">G06Q 20/38</span>
+                        <span class="bg-zinc-800 text-zinc-400 mono text-xs px-2 py-1 rounded-lg">G06F 9/48</span>
+                    </div>
+                    <div class="grid grid-cols-3 gap-4">
+                        <div>
+                            <div class="mono text-lime-500 text-sm font-bold">HIGH</div>
+                            <div class="text-zinc-600 text-xs">Commercial Value</div>
+                        </div>
+                        <div>
+                            <div class="mono text-lime-500 text-sm font-bold">NOVEL</div>
+                            <div class="text-zinc-600 text-xs">Architecture</div>
+                        </div>
+                        <div>
+                            <div class="mono text-lime-500 text-sm font-bold">BROAD</div>
+                            <div class="text-zinc-600 text-xs">Application Scope</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- P005 -->
+        <div class="patent-card tier-c bg-zinc-900 border border-zinc-800 rounded-2xl p-6 mb-4 transition-all duration-300">
+            <div class="flex flex-col md:flex-row md:items-start gap-6">
+                <div class="flex-shrink-0">
+                    <div class="mono text-lime-500 text-xs tracking-wide mb-1">P005</div>
+                    <div class="bg-lime-600/10 border border-lime-600/30 rounded-xl px-3 py-1 mono text-lime-500 text-xs">MEDIUM-HIGH</div>
+                </div>
+                <div class="flex-1">
+                    <h3 class="font-bold text-lg mb-2">Content-Type Dual-Source Request Routing</h3>
+                    <p class="text-zinc-500 text-sm mb-4 leading-relaxed">Single HTTP endpoint serving both payment gateway IPN (JSON) and customer form submissions (URL-encoded). Content-type header inspection. Binary conditional dispatch. Applicable to any webhook-plus-form architecture.</p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="bg-zinc-800 text-zinc-400 mono text-xs px-2 py-1 rounded-lg">G06F 9/54</span>
+                        <span class="bg-zinc-800 text-zinc-400 mono text-xs px-2 py-1 rounded-lg">G06Q 20/38</span>
+                        <span class="bg-zinc-800 text-zinc-400 mono text-xs px-2 py-1 rounded-lg">H04L 67/02</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Layer 4 -->
+        <div class="flex items-center gap-3 mb-6 mt-12">
+            <div class="w-3 h-3 bg-cyan-500 rounded-full"></div>
+            <div class="mono text-cyan-500 text-xs tracking-widest">LAYER 4 — THE FEATURES</div>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-4">
+
+            <!-- P006 -->
+            <div class="patent-card tier-d bg-zinc-900 border border-zinc-800 rounded-2xl p-6 transition-all duration-300">
+                <div class="mono text-cyan-500 text-xs tracking-wide mb-2">P006 · MEDIUM VALUE</div>
+                <h3 class="font-bold mb-2">Quota-Aware Graceful Degradation</h3>
+                <p class="text-zinc-500 text-xs mb-4 leading-relaxed">Quota pre-check + alternative channel routing + order preservation on transmission resource exhaustion. Never fails silently. Never loses an order.</p>
+                <div class="flex flex-wrap gap-1">
+                    <span class="bg-zinc-800 text-zinc-500 mono text-xs px-2 py-0.5 rounded">G06Q 20/06</span>
+                    <span class="bg-zinc-800 text-zinc-500 mono text-xs px-2 py-0.5 rounded">H04L 51/21</span>
+                    <span class="bg-zinc-800 text-zinc-500 mono text-xs px-2 py-0.5 rounded">G06F 11/07</span>
+                </div>
+            </div>
+
+            <!-- P007 -->
+            <div class="patent-card tier-d bg-zinc-900 border border-zinc-800 rounded-2xl p-6 transition-all duration-300">
+                <div class="mono text-cyan-500 text-xs tracking-wide mb-2">P007 · MEDIUM VALUE</div>
+                <h3 class="font-bold mb-2">Psychological Conversion Architecture</h3>
+                <p class="text-zinc-500 text-xs mb-4 leading-relaxed">Seven-mechanism combination for crypto payment interfaces: social proof, loss aversion, technically-grounded countdown timer, urgency signalling, gain framing. The specific combination is novel.</p>
+                <div class="flex flex-wrap gap-1">
+                    <span class="bg-zinc-800 text-zinc-500 mono text-xs px-2 py-0.5 rounded">G06Q 30/02</span>
+                    <span class="bg-zinc-800 text-zinc-500 mono text-xs px-2 py-0.5 rounded">G06F 3/0482</span>
+                    <span class="bg-zinc-800 text-zinc-500 mono text-xs px-2 py-0.5 rounded">G06Q 20/06</span>
+                </div>
+            </div>
+
+            <!-- P008 -->
+            <div class="patent-card tier-d bg-zinc-900 border border-zinc-800 rounded-2xl p-6 transition-all duration-300">
+                <div class="flex items-center gap-2 mb-2">
+                    <div class="mono text-cyan-500 text-xs tracking-wide">P008 · $21.9M CONFIRMED</div>
+                    <div class="bg-orange-600/20 border border-orange-600/40 rounded px-2 py-0.5 mono text-orange-500 text-xs">HIGH PRIORITY</div>
+                </div>
+                <h3 class="font-bold mb-2">Zero-Footprint Receipt Generation</h3>
+                <p class="text-zinc-500 text-xs mb-4 leading-relaxed">Five-stage PDF lifecycle: create, populate, extract blob in-memory, auto-delete source. Zero persistent storage. WooCommerce PDF plugins with 1M+ installs confirmed infringing.</p>
+                <div class="flex flex-wrap gap-1">
+                    <span class="bg-zinc-800 text-zinc-500 mono text-xs px-2 py-0.5 rounded">G06F 40/30</span>
+                    <span class="bg-zinc-800 text-zinc-500 mono text-xs px-2 py-0.5 rounded">G06Q 20/38</span>
+                    <span class="bg-zinc-800 text-zinc-500 mono text-xs px-2 py-0.5 rounded">G06F 16/11</span>
+                </div>
+            </div>
+
+            <!-- P011 -->
+            <div class="patent-card tier-d bg-zinc-900 border border-zinc-800 rounded-2xl p-6 transition-all duration-300">
+                <div class="mono text-cyan-500 text-xs tracking-wide mb-2">P011 · $24M BASE CASE</div>
+                <h3 class="font-bold mb-2">Bundle Replacement Cart Architecture</h3>
+                <p class="text-zinc-500 text-xs mb-4 leading-relaxed">Mandatory atomic bundle replacement + individual blocking + future-price savings + comparative pricing + crypto bridge. Gumroad, Payhip, Sellix source code confirmed.</p>
+                <div class="flex flex-wrap gap-1">
+                    <span class="bg-zinc-800 text-zinc-500 mono text-xs px-2 py-0.5 rounded">G06Q 30/06</span>
+                    <span class="bg-zinc-800 text-zinc-500 mono text-xs px-2 py-0.5 rounded">G06Q 20/06</span>
+                    <span class="bg-zinc-800 text-zinc-500 mono text-xs px-2 py-0.5 rounded">G06F 3/0482</span>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- INFRINGEMENT TABLE -->
+        <div class="mt-16">
+            <div class="mono text-orange-500 text-xs tracking-widest mb-6">◆ CONFIRMED INFRINGERS — PATENT PENDING LICENSING TARGETS</div>
+            <div class="bg-zinc-900 border border-zinc-800 rounded-2xl overflow-hidden">
+                <div class="grid grid-cols-4 gap-4 p-4 border-b border-zinc-800 mono text-xs text-zinc-600 tracking-wide">
+                    <div>ENTITY</div>
+                    <div>CLASSIFICATION</div>
+                    <div>PATENTS</div>
+                    <div>ANNUAL FEE</div>
+                </div>
+                <div class="divide-y divide-zinc-800/50">
+                    <div class="grid grid-cols-4 gap-4 p-4 hover:bg-zinc-800/30 transition-colors">
+                        <div class="font-bold text-sm">Sellix.io</div>
+                        <div class="text-green-500 mono text-xs">CONFIRMED</div>
+                        <div class="text-zinc-400 text-xs">P001, P002, P011</div>
+                        <div class="text-orange-500 mono text-sm font-bold">$250K+</div>
+                    </div>
+                    <div class="grid grid-cols-4 gap-4 p-4 hover:bg-zinc-800/30 transition-colors">
+                        <div class="font-bold text-sm">WooCommerce</div>
+                        <div class="text-green-500 mono text-xs">CONFIRMED</div>
+                        <div class="text-zinc-400 text-xs">P002, P008</div>
+                        <div class="text-orange-500 mono text-sm font-bold">$1M+</div>
+                    </div>
+                    <div class="grid grid-cols-4 gap-4 p-4 hover:bg-zinc-800/30 transition-colors">
+                        <div class="font-bold text-sm">NOWPayments</div>
+                        <div class="text-green-500 mono text-xs">CONFIRMED</div>
+                        <div class="text-zinc-400 text-xs">P001, P002, P003</div>
+                        <div class="text-orange-500 mono text-sm font-bold">$175K+</div>
+                    </div>
+                    <div class="grid grid-cols-4 gap-4 p-4 hover:bg-zinc-800/30 transition-colors">
+                        <div class="font-bold text-sm">Gumroad</div>
+                        <div class="text-yellow-500 mono text-xs">STRONG EVIDENCE</div>
+                        <div class="text-zinc-400 text-xs">P001, P011</div>
+                        <div class="text-orange-500 mono text-sm font-bold">$600K+</div>
+                    </div>
+                    <div class="grid grid-cols-4 gap-4 p-4 hover:bg-zinc-800/30 transition-colors">
+                        <div class="font-bold text-sm">CoinPayments</div>
+                        <div class="text-green-500 mono text-xs">CONFIRMED</div>
+                        <div class="text-zinc-400 text-xs">P001, P002, P003</div>
+                        <div class="text-orange-500 mono text-sm font-bold">$400K+</div>
+                    </div>
+                    <div class="grid grid-cols-4 gap-4 p-4 hover:bg-zinc-800/30 transition-colors">
+                        <div class="font-bold text-sm">Lemon Squeezy</div>
+                        <div class="text-yellow-500 mono text-xs">STRONG EVIDENCE</div>
+                        <div class="text-zinc-400 text-xs">P011, P007</div>
+                        <div class="text-orange-500 mono text-sm font-bold">$200K+</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- CTA -->
+        <div class="mt-16 bg-zinc-900 border border-zinc-800 rounded-2xl p-8 text-center">
+            <div class="mono text-orange-500 text-xs tracking-widest mb-3">◆ FULL DOCUMENTATION AVAILABLE UNDER NDA</div>
+            <h3 class="text-2xl font-bold mb-3">Prior art search reports. Claim charts. Infringement analyses.</h3>
+            <p class="text-zinc-500 text-sm mb-6">289-312 documents reviewed per patent. Zero anticipatory documents found for any claim.</p>
+            <a href="download.html" class="inline-block bg-orange-600 hover:bg-orange-500 text-black font-bold px-8 py-3 rounded-xl text-sm transition-all active:scale-95">
+                DOWNLOAD INVESTOR PACK →
+            </a>
+        </div>
+
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="border-t border-zinc-800 py-8">
+        <div class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-4">
+            <div class="mono text-zinc-600 text-xs">Patent Pending · PCT via ARIPO · Filed May 2026</div>
+            <div class="flex gap-6">
+                <a href="index.html" class="text-zinc-600 hover:text-orange-500 text-xs transition-colors">Home</a>
+                <a href="invest.html" class="text-zinc-600 hover:text-orange-500 text-xs transition-colors">Why Invest</a>
+                <a href="download.html" class="text-zinc-600 hover:text-orange-500 text-xs transition-colors">Download</a>
+            </div>
+            <div class="mono text-zinc-600 text-xs">© The Unchained Commerce Concern · 2026</div>
+        </div>
+    </footer>
+
+</body>
+</html>
