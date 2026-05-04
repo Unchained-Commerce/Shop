@@ -1,6 +1,17 @@
 {
   "posts": [
     {
+      "id": "post-20260504-ZGQW",
+      "title": "Automated Crypto Payment and Delivery for Digital Products: What Actually Works When You Are in a Restricted Country",
+      "date": "2026-05-04",
+      "category": "Selling Digital Products",
+      "contentType": "comparison",
+      "excerpt": "You made the product. The platform blocked you. Here is how to sell it anyway — to anyone, anywhere, with no gatekeeper in the way.",
+      "file": "post-20260504-ZGQW.json",
+      "image": "https://unchained-commerce.github.io/Shop/posts/images/post-20260504-ZGQW.png",
+      "imageSource": "picsum"
+    },
+    {
       "id": "post-20260504-882B",
       "title": "Why Monetize Skills Countries Fails for Creators Outside the US and Europe",
       "date": "2026-05-04",
@@ -11,5 +22,7 @@
       "image": "https://unchained-commerce.github.io/Shop/posts/images/post-20260504-882B.png",
       "imageSource": "pollinations-simple"
     }
-  ]
+  ],
+  "lastUpdated": "2026-05-04",
+  "totalPosts": 2
 }
