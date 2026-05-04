@@ -1,6 +1,17 @@
 {
   "posts": [
     {
+      "id": "post-20260504-16Z8",
+      "title": "PayPal vs Crypto for Gumroad Alternatives for Creators in Restricted Countries — An Honest Comparison",
+      "date": "2026-05-04",
+      "category": "Platform Restrictions",
+      "contentType": "comparison",
+      "excerpt": "PayPal, Stripe, Gumroad, and Payhip do not work in your country. That is a platform problem, not a you problem. Here is what actually works.",
+      "file": "post-20260504-16Z8.json",
+      "image": "https://unchained-commerce.github.io/Shop/posts/images/post-20260504-16Z8.png",
+      "imageSource": "picsum"
+    },
+    {
       "id": "post-20260504-ZGQW",
       "title": "Automated Crypto Payment and Delivery for Digital Products: What Actually Works When You Are in a Restricted Country",
       "date": "2026-05-04",
@@ -24,5 +35,5 @@
     }
   ],
   "lastUpdated": "2026-05-04",
-  "totalPosts": 2
+  "totalPosts": 3
 }
