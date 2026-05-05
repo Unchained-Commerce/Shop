@@ -1,6 +1,17 @@
 {
   "posts": [
     {
+      "id": "post-20260505-TSET",
+      "title": "PayPal vs Crypto for Integrating NOWPayments Into a Digital Goods Store — An Honest Comparison",
+      "date": "2026-05-05",
+      "category": "Getting Paid",
+      "contentType": "comparison",
+      "excerpt": "Getting paid for your digital work should not depend on which country you were born in. Here is how creators everywhere collect real income.",
+      "file": "post-20260505-TSET.json",
+      "image": "https://unchained-commerce.github.io/Shop/posts/images/post-20260505-TSET.png",
+      "imageSource": "picsum"
+    },
+    {
       "id": "post-20260504-H4VJ",
       "title": "The Real Difference Between Platform Stores and Building Digital Creator Income Without Western Payment Platforms",
       "date": "2026-05-04",
@@ -45,6 +56,6 @@
       "imageSource": "pollinations-simple"
     }
   ],
-  "lastUpdated": "2026-05-04",
-  "totalPosts": 4
+  "lastUpdated": "2026-05-05",
+  "totalPosts": 5
 }
